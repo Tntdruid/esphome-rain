@@ -1,0 +1,22 @@
+The Home Assistant Automation
+
+alias: Rain
+description: ""
+mode: single
+triggers:
+  - entity_id:
+      - binary_sensor.smutregn
+    from: "on"
+    to: "off"
+    trigger: state
+  - entity_id:
+      - binary_sensor.smutregn
+    from: "off"
+    to: "on"
+    trigger: state
+conditions: []
+actions:
+  - data: {}
+    target:
+      entity_id: counter.rain_tips
+    action: counter.increment
