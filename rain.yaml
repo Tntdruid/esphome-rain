@@ -36,7 +36,7 @@ binary_sensor:
       open_drain: false
       pulldown: false
     inverted: false
-  name: smutregn
+  name: myrain
   device_class: door
   filters:
   - delayed_on: 10ms
